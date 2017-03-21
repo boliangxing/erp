@@ -1,0 +1,14 @@
+<h2>错误信息</h2>
+<span>
+如果状态码不是200，就应该向用户返回出错信息。一般来说，返回的信息中将msg作为键名，出错信息作为键值即可。<br>
+{
+    "code":"301"
+    "msg": "未找到该用户"
+}
+</span>
+
+<h4>DEMO</h4>
+<p>例：用户登录接口，其中<strong>用户名输入错误</strong>密码正确</p>
+<p>请求：域名/V1/?user=<span style="color:red">xiaoming1</span>&pwd=123456</p>
+<p>返回值：{ "code": 301, "msg": "未找到该用户", "data": []}</p>
+<p>说明：json数组中的第一个键值为code，<a href="code.html">状态码</a>。<strong>第二个键值为错误信息msg，错误提示信息。</strong>第三个键值未服务器返回的数据（JSON 数组）</p>

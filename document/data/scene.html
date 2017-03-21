@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="css/style.css" />
+
+<h4>情景</h4>
+<table border="1" cellspacing="0" cellpadding="0">
+    <tr>
+        <th>参数</th><th>请求</th><th>说明</th><th>返回值</th>
+    </tr>
+    <tr>
+        <td>uid</td>
+        <td>get</td>
+        <td>获取用户ID 的所有情景列表</td>
+        <td>[{"sid": 0,"name": "全部"},{"sid": 1,"name": "情景1"},{"sid": 2,"name": "情景2"},{"sid": 3,"name": "情景3"}]</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <p>示例：</p>
+            <p><strong>情景仅供读取列表数据</strong></p>
+            <p>获取情景：发送uid请求域名/版本/scene/index</p>
+            <p>返回值：{code: 200, msg: "获取用户情景模式成功",data:[{id: 0, name: "全部"}, {id: 1, name: "回家"}, {id: 2, name: "离家"}, ...]}</p>
+        </td>
+    </tr>
+</table>

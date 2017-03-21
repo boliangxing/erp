@@ -1,0 +1,8 @@
+#nginx
+#rewrite ^/([a-z]*) /index.php?/$1 last;
+#rewrite ^/(admin)$ /index.php?/$2 last;
+
+#apache
+RewriteEngine on
+RewriteCond $1 !^(index\.php|uploads|document|webApp|admin|static|robots|public|\.txt)
+RewriteRule ^(.*)$ /index.php/$1

@@ -1,0 +1,122 @@
+<link rel="stylesheet" href="css/style.css" />
+
+<h4>设备</h4>
+<table border="1" cellspacing="0" cellpadding="0">
+    <tr>
+        <th>参数</th><th>请求</th><th>说明</th><th>返回值</th>
+    </tr>
+    <tr>
+        <td>uid</td>
+        <td>get</td>
+        <td>获取所有uid下的设备</td>
+        <td>
+            <pre>
+            {
+              "code": 200,
+              "msg": "\u83b7\u53d6\u8bbe\u5907\u5217\u8868\u6210\u529f",
+              "data": [
+                {
+                  "fid": "00000001",
+                  "portid": null,
+                  "status": 1,
+                  "name": "空气净化器",
+                  "room": "客厅",
+                  "cpuid": "00000000ff3705db5233393879405713",
+                  "attach": {
+                    "switch": 0,
+                    "air": "优"
+                  }
+                },
+                {
+                  "fid": "00000002",
+                  "portid": null,
+                  "status": 1,
+                  "name": "空气净化器",
+                  "room": "厨房",
+                  "cpuid": "00000000ff3505d25447383654304305",
+                  "attach": {
+                    "switch": 0,
+                    "air": "良"
+                  }
+                },
+                ...
+              ]
+            }
+            </pre>
+        </td>
+    </tr>
+    <tr>
+        <td>uid,fid</td>
+        <td>get</td>
+        <td>获取设备fid的详细数据</td>
+        <td>
+            <pre>
+            {
+                "code": 200,
+                "msg": "获取设备详情成功",
+                "data": {
+                    "facilityDataList": [
+                        {
+                            "parname": "开关机",
+                            "fieldname": "switch",
+                            "value": 0
+                        },
+                        {
+                            "parname": "风速",
+                            "fieldname": "wind",
+                            "value": null,
+                            "units": "档"
+                        },
+                        {
+                            "parname": "杀菌",
+                            "fieldname": "ultraviolet"
+                        },
+                        {
+                            "parname": "负氧离子",
+                            "fieldname": "anion",
+                            "value": 0
+                        },
+                        {
+                            "parname": "杀菌",
+                            "fieldname": "sterilization",
+                            "value": 0
+                        },
+                        ...
+                    ],
+                    "facilityInfo": {
+                        "fid": "00000001",
+                        "customname": "空气净化器",
+                        "name": "空气净化器",
+                        "portid": 1,
+                        "status": 1,
+                        "room": "李家"
+                    }
+                }
+            }
+            </pre>
+        </td>
+    </tr>
+    <tr>
+        <td>uid,fid</td>
+        <td>delete</td>
+        <td>删除用户的设备</td>
+        <td{code: 200, msg: "删除设备成功", data: []}></td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            示例：
+            <p>获取用户设备列表:GET用户的UID请求到域名/版本/facility/1。</p>
+            <p>返回值{"code":200,"data":设备列表;"msg":"返回信息"}</p>
+            <p style="color:#F3492D;font-weight:bold">注意①返回的值中，data是二维数组，可以通过遍历这个用户的多个设备</p>
+            <p style="color:#F3492D;font-weight:bold">　　②data的一维中的status的返回值1:待配网;1:离线设备;2:在线设备</p>
+
+            <hr>
+
+            <p>获取用户设备详情:GET用户的UID和FID请求到域名/版本/facility/1</p>
+            <p style="color:#F2492D;font-weight:bold">注意①如果facilityInfo数组中的status不等1，说明该设备不在线。应该退出这个页面</p>
+            <p style="color:#F2492D;font-weight:bold">　　②facilityInfo 中的customname不为空，则设备名称为customname否为设备名称为name</p>
+            <p style="color:#F2492D;font-weight:bold">　　③facilityInfo switch为1代表开机0代表关机，关机后底部的风速，负氧，紫外定时等都不可使用。</p>
+            <p>
+        </td>
+    </tr>
+</table>

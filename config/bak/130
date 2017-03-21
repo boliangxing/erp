@@ -1,0 +1,12 @@
+<?php 
+$plan = array( 
+			"D1" => array(
+			 		"name"=>"开关",
+			 		"formula" => "arr",
+			 		"units" => "1:开,2:关",
+			 		"memo" => "",
+			 		"fieldname" => "power",
+			 	),
+            "D2" =>
+	)
+    			

@@ -1,0 +1,5 @@
+.warp{width:1000px;margin:0 auto;}
+.menu{float:left;width:200px;}
+.content{height:100%;}
+.content iframe{height:100%;width:800px;}
+th,td{padding:5px;}

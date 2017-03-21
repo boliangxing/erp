@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="css/style.css" />
+<h4>区域</h4>
+<table border="1" cellspacing="0" cellpadding="0">
+    <tr>
+        <th>参数</th><th>请求</th><th>说明</th><th>返回值</th>
+    </tr>
+    <tr>
+        <td>uid</td>
+        <td>get</td>
+        <td>发送用户uid，将返回用户UID编号值的所有区域信息,其中pretermit1代表是默认区域设备，不能删除 </td>
+        <td>{code: 200, msg: "获取区域分类成功", data: [{rid: "2", name: "客厅", pretermit: "1"}, {rid: "3", name: "厨房", pretermit: "1"},…]}</td>
+    </tr>
+    <tr>
+        <td>uid,name</td>
+        <td>post</td>
+        <td>UID用于判定身份，name为区域名称</td>
+        <td>{code: 200, msg: "区域添加成功", data: []}</td>
+    </tr>
+    <tr>
+        <td>uid,rid,name</td>
+        <td>put</td>
+        <td>用户名，区域RID，区域名称，修改该区域的名称</td>
+        <td>{code: 200, msg: "区域修改成功", data: []}</td>
+    </tr>
+    <tr>
+        <td>uid,rid</td>
+        <td>delete</td>
+        <td>用户uid和区域RID 。用于删除该区域</td>
+        <td>{code: 200, msg: "区域删除成功", data: []}</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <p>示例：</p>
+            <p>获取情景：发送uid用GET请求域名/版本/region/index/1</p>
+            <p>返回值：{code: 200, msg: "获取区域分类成功", data: [{rid: "1", name: "客厅"}, {rid: "3", name: "书房"}]}</p>
+            <hr>
+            <p>添加情景：用户发送uid以及添加的情景名称name POST请求到域名/版本/region/index/1</p>
+            <p>返回值：{code: 200, msg: "区域添加成功", data: []}</p>
+            <hr>
+            <p>修改情景：发送用户uid和json数组rid,name。如{"rid": "3", "name": "厨房"}put到域名/版本/region/index/1</p>
+            <p>返回值：{code: 200, msg: "区域修改成功", data: []}</p>
+            <hr>
+            <p>删除情景：发送用户uid,情景rid的json数值如{"rid": "3"} DELETE请求到域名/版本/region/1</p>
+            <p>返回值：{code: 200, msg: "区域删除成功", data: []}</p>
+        </td>
+    </tr>
+</table>
+<hr>

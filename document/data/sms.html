@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="css/style.css" />
+
+
+<h4>短信验证码</h4>
+<table border="1" cellspacing="0" cellpadding="0">
+    <tr>
+        <th>参数</th><th>请求</th><th>说明</th><th>返回值</th>
+    </tr>
+    <tr>
+        <td>phone</td>
+        <td>get</td>
+        <td>发送phone参数成功并返回验证码信息</td>
+        <td>{
+    "code": 200,
+    "msg": "success",
+    "data": [{phone: "13888888888", yzm: "1234"}]
+}
+    </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <p>示例：</p>
+            <p>get 13888888888 请求 域名/版本/sms/index</p>
+            <p>返回值:{
+    "code": 200,
+    "msg": "提交成功",
+    "data": [{phone: "13888888888", yzm: "1234"}]
+            }</p>
+        </td>
+    </tr>
+</table>

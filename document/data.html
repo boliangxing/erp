@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="css/style.css" />
+<h2>数据请求</h2>
+<h4>通用说明</h4>
+<ul>
+<li>GET（SELECT）：从服务器取出资源（一项或多项）。</li>
+<li>POST（CREATE）：在服务器新建一个资源。</li>
+<li>PUT（UPDATE）：在服务器更新资源（客户端提供改变后的完整资源）。</li>
+<li>PATCH（UPDATE）：在服务器更新资源（客户端提供改变的属性）。</li>
+<li>DELETE（DELETE）：从服务器删除资源。</li>
+</ul>
+<span >
+<strong style="color:red">特别注意</strong>
+<p>get/post 使用from-data格式数据，其他请求一律使用json格式数据，如put,delete请求。</p>
+<strong><p>需要用户UID参数的需要在链接的结尾加上。例如：域名/版本/user/index/<span style="color:red">1</span>。<-其中1就是用户的UID</strong></p>
+</span>

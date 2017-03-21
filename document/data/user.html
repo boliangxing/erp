@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="css/style.css" />
+<h4>用户</h4>
+<table border="1" cellspacing="0" cellpadding="0">
+    <tr>
+        <th>参数</th><th>请求</th><th>说明</th><th>返回值</th>
+    </tr>
+    <tr>
+        <td>uid</td>
+        <td>get</td>
+        <td>用户id，将返回用户ID编号值的详细信息</td>
+        <td>{code: 200, msg: "成功", data: {id: "1"}}</td>
+    </tr>
+    <tr>
+        <td>phone,pwd</td>
+        <td>get</td>
+        <td>用户名密码，用于用户登录验证身份</td>
+        <td>{code: 200, msg: "用户注册成功", data: {id: 10}}</td>
+    </tr>
+    <tr>
+        <td>phone,yzm,pwd</td>
+        <td>get</td>
+        <td>用户名重置密码，用于用户忘记密码,需要有验证码来检测手机号</td>
+        <td>{code: 200, msg: "密码修改成功"}</td>
+    </tr>
+    <tr>
+        <td>phone,pwd,yzm</td>
+        <td>post</td>
+        <td>用户名，密码，验证码用于用户注册，并返回用户的ID</td>
+        <td>{"code": 200,"msg": "成功","data": {"nick": "小明","phone": "13888888888","pwd": "123456","state": "1"}}</td>
+    </tr>
+    <tr>
+        <td>uid,oldpwd,newpwd</td>
+        <td>put</td>
+        <td>用户id，密码。用于用户修改密码</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <p>示例：</p>
+            <p>用户登录：发送phone,phone用GET请求域名/版本/user/index?phone=13888888888&pwd=123123</p>
+            <p>返回值：{code: 200, msg: "成功", data: {uid: "1"}}</p>
+            <hr>
+            <p>获取用户信息：发送用户uid，GET请求到域名/版本/user/index/1</p>
+            <p>返回值：{"code": 200,"msg": "成功","data": {"nick": "小明","phone": "13888888888","pwd": "123456","state": "1"}}</p>
+            <hr>
+            <p>用户注册：发送phone,pwd,yzm POST到域名/版本/user/index</p>
+            <p>返回值：{code: 200, msg: "用户注册成功", data: {uid: 10}}</p>
+            <hr>
+            <p>修改密码：发送用户id,newpwd,oldpwd组合json数组 PUT请求到域名/版本/user/1,其中newpwd,oldpwd 用json格式数据</p>
+            <p>返回值：{code: 301, msg: "密码修改成功", data: []}</p>
+        </td>
+    </tr>
+</table>

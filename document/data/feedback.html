@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="css/style.css" />
+
+<h4>意见反馈</h4>
+<table border="1" cellspacing="0" cellpadding="0">
+    <tr>
+        <th>参数</th><th>请求</th><th>说明</th><th>返回值</th>
+    </tr>
+    <tr>
+        <td>uid,content</td>
+        <td>post</td>
+        <td>post请求并发送uid+content(反馈内容)参数，提交用户的反馈信息</td>
+        <td>{
+    "code": 200,
+    "msg": "提交成功",
+    "data": []
+}
+    </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <p>示例：</p>
+            <p>post:content->hello word 请求 域名/版本/feedback/index/1</p>
+            <p>返回值:{
+    "code": 200,
+    "msg": "提交成功",
+    "data": []
+            }</p>
+        </td>
+    </tr>
+</table>

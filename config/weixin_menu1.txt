@@ -1,0 +1,37 @@
+[
+    {
+        "type": "view",
+        "name": "使用指南",
+        "url": "http://jld.139.hk/webApp"
+    },
+    {
+        "type": "view",
+        "name": "公司网站",
+        "url": "http://www.chjld.com/"
+    },
+    {
+        "name": "智能家居",
+        "sub_button": [
+            {
+                "type": "view",
+                "name": "智能插座",
+                "url": "http://jld.139.hk/webApp"
+            },
+            {
+                "type": "view",
+                "name": "空调",
+                "url": "http://jld.139.hk/webApp"
+            },
+            {
+                "type": "view",
+                "name": "饮水机",
+                "url": "http://jld.139.hk/webApp"
+            },
+            {
+                "type": "view",
+                "name": "除湿器",
+                "url": "http://jld.139.hk/webApp"
+            }
+        ]
+    }
+]

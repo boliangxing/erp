@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="css/style.css" />
+
+<h4>天气</h4>
+<table border="1" cellspacing="0" cellpadding="0">
+    <tr>
+        <th>参数</th><th>请求</th><th>说明</th><th>返回值</th>
+    </tr>
+    <tr>
+        <td>city</td>
+        <td>get</td>
+        <td>get请求并发送city参数，获取城市的天气信息</td>
+        <td>{
+    "code": 200,
+    "msg": "success",
+    "data": {
+        "date": "周三 03月23日 (实时：12℃)",
+        "dayPictureUrl": "http://api.map.baidu.com/images/weather/day/qing.png",
+        "nightPictureUrl": "http://api.map.baidu.com/images/weather/night/qing.png",
+        "weather": "晴",
+        "wind": "北风3-4级",
+        "temperature": "15 ~ 3℃",
+        "addr": "北京"
+    }
+}</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            示例：请求域名/版本/weather?city=北京
+        </td>
+    </tr>
+</table>
